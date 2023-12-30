@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // 目標: キーボードで移動する
-    // 一回の入力で、1マス分徐々に自動で動く
-    // 移動中は入力を受け付けない
-    // 徐々に動く: コルーチン
+    // 目標: PlayerｍのAnimatorを操作して、移動アニメーションを再生する
+    // InputX
+    // InputY
+    // IsMoving
+
+    Animator animator;
+
+    private void Awake()
+    {
+        // 自分についているAnimatorコンポーネントを取得する
+        animator = GetComponent<Animator>();
+    }
+
     bool isMoving = false;
     void Update()
     {
@@ -22,8 +31,18 @@ public class PlayerController : MonoBehaviour
                 y = 0;
             }
 
-            StartCoroutine(Move(new Vector2(x, y)));
+            // 入力があるなら
+            if (x != 0 || y != 0)
+            {
+                // 移動方向をアニメーターに渡す
+                animator.SetFloat("InputX", x);
+                animator.SetFloat("InputY", y);
+
+                StartCoroutine(Move(new Vector2(x, y)));
+            }
         }
+
+        animator.SetBool("IsMoving", isMoving);
     }
 
     // 1マス徐々に近づける
