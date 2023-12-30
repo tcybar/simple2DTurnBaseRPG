@@ -1,0 +1,24 @@
+# ==== Commit Messages ====
+
+# ==== Commit Messages(Template) ====
+# :emoji: 変更内容 #Issue番号あれば
+# 例) :+1: コメント追加 #438
+#       👍 コメント追加 #438
+
+# :sparkles:                    ✨ 機能追加
+# :zap:                         ⚡️ 機能改修
+# :fire:                        🔥 機能削除
+# :bug:                         🐛 バグ修正
+# :adhesive_bandage:            🩹 ちょっとした修正
+# :construction:                🚧 作業中
+# :art:                         🎨 コードの見た目を整える
+# :recycle:                     ♻️ リファクタリング
+# :memo:                        📝 ドキュメント修正
+# :rocket:                      🚀 デプロイ
+# :ambulance:                   🚑️ 緊急性の高いバグ
+# :bookmark:                    🔖 リリース時のタグ付けとか
+# :white_check_mark:            ✅ テストの追加、更新
+# :twisted_rightwards_arrows:   🔀 ブランチマージ
+# :monocle_face:                🧐 調査用のデータを仕込む
+
+# 絵文字一覧：https://gitmoji.dev/
